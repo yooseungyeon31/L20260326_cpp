@@ -7,9 +7,23 @@ class UEngine
 {
 
 	
-public:
+protected:
 	UEngine();
+
+	static UEngine* Instance;
+
+public:
 	~UEngine();
+
+	
+	static UEngine* GetInstance()
+	{
+		if (Instance == nullptr)
+		{
+			Instance = new UEngine();
+		}
+		return Instance;
+	}
 
 	void Init();
 	void Term();
@@ -40,3 +54,5 @@ protected:
 	int bIsRunning : 1; //int 형 중에 1바이트만 쓰겠다. 
 
 };
+
+#define GEngine UEngine::GetInstance()

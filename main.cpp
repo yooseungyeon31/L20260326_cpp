@@ -10,22 +10,99 @@
 #include <fstream> //파일 불러오기 
 
 using namespace std;
+//--------------------------------
+//static이랑 같이 사용을 해야함.
+//Singleton 개념
+class Singleton
+{
+private:
+	Singleton()
+	{
+
+	}
+
+	static Singleton* Instance;
+public:
+	static Singleton* GetInstance()
+	{
+		if (Instance == nullptr)
+		{
+			Instance = new Singleton();
+		}
+		return Instance;
+	}
+};
+Singleton* Singleton::Instance = nullptr; //이런직왜해?
+//엔진이라고 생각해봐 엔진 두개키면 
+//--------------------------------
+
+////global variable, 전역 변수
+//int Value = 1;
+//
+//class Static
+//{
+//public:
+//	Static()
+//	{
+//		Static::Count++;
+//	}
+//
+//	virtual ~Static()
+//	{
+//		Static::Count--;
+//	}
+//
+//	//예외
+//	//정적 변수
+//	static int Count;
+//
+//	int Value;
+//
+//	//정적 함수
+//	static void Display()
+//	{
+//		//		Value = 1; X
+//		cout << Count << endl;
+//	}
+//};
+//
+//int Static::Count = 0;
+
 
 int main()
 {
+	UEngine* MyEngine = UEngine::GetInstance();
+	//-------------------------
+	///Singleton::GetInstance();
 
+//--------------------------------
+	//Static::Count++;
 
+	//Static* D = new Static();
 
+	//Static::Display();
 
-	//엔진 킨다.
-	UEngine* MyEngine = new UEngine();
-	//엔진 로딩
-	MyEngine->GetWorld()->Load("level01.umap");
-	//엔진 실행
-	MyEngine->Run();
-	//엔진 끌 때 삭제
-	delete MyEngine;
+	//delete D;
 
+	//Static::Display();
+
+//----------------------------------------------------
+	GEngine->GetInstance();
+
+	GEngine->GetWorld()->Load("level01.umap");
+
+	GEngine->Run();
+
+//------------------------------------------
+	////엔진 킨다.
+	//UEngine* MyEngine = new UEngine();
+	////엔진 로딩
+	//MyEngine->GetWorld()->Load("level01.umap");
+	////엔진 실행
+	//MyEngine->Run();
+	////엔진 끌 때 삭제
+	//delete MyEngine;
+//-------------------------------------------------------
 	return 0;
 }
 

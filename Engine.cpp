@@ -4,6 +4,10 @@
 #include "Actor.h"
 #include "World.h"
 
+//밖에서 선언. 예외
+//초기화는 밖에서 해준다.
+UEngine* UEngine::Instance = nullptr;
+
 UEngine::UEngine()
 {
 	Init();

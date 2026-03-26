@@ -7,10 +7,16 @@
 #include "Player.h"
 #include "Monster.h"
 
+#include <fstream> //파일 불러오기 
+
 using namespace std;
 
 int main()
 {
+
+
+
+
 	//엔진 킨다.
 	UEngine* MyEngine = new UEngine();
 	//엔진 로딩

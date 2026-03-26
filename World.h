@@ -20,28 +20,28 @@ public:
 	}
 
 	//-------------------
-	//몬스터 스폰
-	template<typename T>
-	AActor* SpawnMonster()
-	{
-		AActor* SecondActor = new T;
-		Actors.push_back(SecondActor);
+	////몬스터 스폰
+	//template<typename T>
+	//AActor* SpawnMonster()
+	//{
+	//	AActor* SecondActor = new T;
+	//	Actors.push_back(SecondActor);
 
-		return SecondActor;
-	}
+	//	return SecondActor;
+	//}
 
-	//벽 스폰
-	template<typename T>
-	AActor* SpawnWall()
-	{
-		AActor* ThirdActor = new T;
-	
-		
-			Actors.push_back(ThirdActor);
-	
+	////벽 스폰
+	//template<typename T>
+	//AActor* SpawnWall()
+	//{
+	//	AActor* ThirdActor = new T;
+	//
+	//	
+	//		Actors.push_back(ThirdActor);
+	//
 
-		return ThirdActor;
-	}
+	//	return ThirdActor;
+	//}
 	//----------------------
 	
 	

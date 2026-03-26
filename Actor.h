@@ -13,6 +13,8 @@ public:
 
 	virtual void Render();
 
+	void SetActorLocation(int NewX, int NewY); //엑터 위치 지정
+
 //엑터 생성하려면 매쉬,위치가 필요하 
 protected:
 	int X;

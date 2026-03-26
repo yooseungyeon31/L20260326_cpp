@@ -6,10 +6,10 @@ class AWall: public AActor
 {
 
 public:
-	AWall(char InMesh = '*');
+	AWall(int InX = 0, int InY = 0, char InMesh = '*');
 	virtual ~AWall();
 
 
-	void Render();
+	//void Render();
 };
 

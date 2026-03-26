@@ -38,6 +38,32 @@ public:
 
 	}
 
+	//문자열 비교방법--------------------
+	//1. 크기 비교
+	bool operator = (const String& Other)
+	{
+		if (Length != Other.GetLength())
+		{//현재 길이랑 새로운길이랑 길이비교하고 다르면 false 리턴
+			return false;
+		}
+
+
+
+		//하나하나 직접 비교하기
+		for (int i = 0; i < Length; i++)
+		{
+			if (Data[i] != Other.Data[i])
+			{
+				return false;
+			}
+		}
+
+		//만약에 문자가 100만자 까지 된다면 어떻게 하지?..?
+		return true;
+
+	}
+	//------------------------------------
+
 	~String()
 	{
 		delete[] Data;
@@ -80,6 +106,8 @@ public:
 
 	}
 
+	//아무것도 바뀌지 않고 정보만 가져온다.그래서 const붙임.
+	//()인자 앞에 있는 것도 마찬가지로 인자값은 바꾸지 않겠다. 의미
 	inline const char* GetPointer() const
 	{
 		return Data;
@@ -118,3 +146,4 @@ protected:
 	}
 };
 
+//문자열 비교하는 방법

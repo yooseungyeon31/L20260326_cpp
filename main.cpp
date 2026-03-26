@@ -21,12 +21,15 @@ int main()
 	String S1 = "Hello";
 	String S2 = "World";
 
-	String S3 = S1 + " " + S2;
+	//이 더하기랑 operator쓴게 똑같은거임.
+	//String S3 = S1 + " " + S2;
 	//String S2 = S1;
-
-	//String S3(S1.operator+(" ") + S2);
+	String S3(S1.operator+(" ").operator+(S2));
+	
 
 	cout << S3.GetPointer() << endl;
+
+	//cout << (S1 == S2) << endl;
 
 	return 0;
 }

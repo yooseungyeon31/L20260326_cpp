@@ -8,6 +8,8 @@
 //초기화는 밖에서 해준다.
 UEngine* UEngine::Instance = nullptr;
 
+int UEngine::KeyCode = 0;
+
 UEngine::UEngine()
 {
 	Init();
@@ -39,7 +41,7 @@ void UEngine::Run()
 	while (bIsRunning)
 	{
 		//엔진시작되면 하는거 3가지. 입력, 실행, 그리기
-		//Input();
+		Input();
 		Tick();
 		Render();
 
@@ -50,7 +52,7 @@ void UEngine::Run()
 void UEngine::Input()
 {
 	
-	int KeyCode = _getch();
+	KeyCode = _getch();
 }
 
 void UEngine::Tick()

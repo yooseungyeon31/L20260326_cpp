@@ -71,7 +71,7 @@ Singleton* Singleton::Instance = nullptr; //이런직왜해?
 
 int main()
 {
-	UEngine* MyEngine = UEngine::GetInstance();
+	//UEngine* MyEngine = UEngine::GetInstance();
 	//-------------------------
 	///Singleton::GetInstance();
 

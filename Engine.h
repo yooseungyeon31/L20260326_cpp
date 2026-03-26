@@ -35,6 +35,8 @@ public:
 		return World;
 	}
 
+	static int KeyCode;
+
 	//template<typename T> 
 	//void SpawnActor(const AActor* NewActor);//새로운 엑터를 스폰해줌 
 

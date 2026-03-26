@@ -1,6 +1,8 @@
 #include "World.h"
 #include "Actor.h"
 #include "Player.h"
+#include "Monster.h"
+#include "Wall.h"
 
 UWorld::UWorld()
 {
@@ -19,6 +21,9 @@ UWorld::~UWorld()
 void UWorld::Load(std::string MapName)
 {
 	AActor* NewActor = SpawnActor < APlayer>();
+	AActor* SecondActor = SpawnMonster <AMonster>(); //몬스터 스폰
+	AActor* ThiedActor = SpawnWall<AWall>(); //벽 스폰
+
 }
 
 void UWorld::Tick()
@@ -38,7 +43,9 @@ void UWorld::Render()
 	for (auto Actor : Actors)
 	{
 		Actor->Render();
+	
 	}
+
 
 }
 

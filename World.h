@@ -19,6 +19,34 @@ public:
 		return NewActor;
 	}
 
+	//-------------------
+	//몬스터 스폰
+	template<typename T>
+	AActor* SpawnMonster()
+	{
+		AActor* SecondActor = new T;
+		Actors.push_back(SecondActor);
+
+		return SecondActor;
+	}
+
+	//벽 스폰
+	template<typename T>
+	AActor* SpawnWall()
+	{
+		AActor* ThirdActor = new T;
+	
+		
+			Actors.push_back(ThirdActor);
+	
+
+		return ThirdActor;
+	}
+	//----------------------
+	
+	
+
+
 	//엔진 시작하자마자 로딩을 할거다.
 	void Load(std::string MapName); //맵 이름을 로딩한다. 
 	//파일 읽어서 엑터 생성
